@@ -1,11 +1,11 @@
 const http = require('http');
-const fs = require ('fs');
+const fs = require('fs');
 
 const server = http.createServer((req, res) => {
     const url = req.url;
     const method = req.method;
 
-    if(url === "/"){
+    if (url === "/") {
         res.setHeader('Content-Type', 'text/html');
         res.write('<html>');
         res.write('<head><title>Send a Message</title></head>');
@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
         return res.end();
     }
 
-    if(url === "/message" && method === "POST"){
+    if (url === "/message" && method === "POST") {
         const body = [];
         req.on('data', (chunk) => {
             console.log(chunk);
@@ -25,10 +25,11 @@ const server = http.createServer((req, res) => {
             const parsedBody = Buffer.concat(body).toString();
             console.log(parsedBody);
             const message = parsedBody.split('=')[1];
-            fs.writeFileSync('message.txt', message);
-            res.statusCode = 302;
-            res.setHeader('Location', '/');
-            return res.end();
+            fs.writeFile('message.txt', message, err => {
+                res.statusCode = 302;
+                res.setHeader('Location', '/');
+                return res.end();
+            });
         });
     }
 
