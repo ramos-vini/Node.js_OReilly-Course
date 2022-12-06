@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/ramos-vini/Node.js_OReilly-Course/issues"
   },
-  "homepage": "https://github.com/ramos-vini/Node.js_OReilly-Course#readme"
+  "homepage": "https://github.com/ramos-vini/Node.js_OReilly-Course#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
