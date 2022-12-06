@@ -1,0 +1,21 @@
+{
+  "name": "node.js-the-complete-guide",
+  "version": "1.0.0",
+  "description": "O'Reilly Node.js course",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramos-vini/Node.js_OReilly-Course.git"
+  },
+  "author": "Vinícius Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramos-vini/Node.js_OReilly-Course/issues"
+  },
+  "homepage": "https://github.com/ramos-vini/Node.js_OReilly-Course#readme"
+}
