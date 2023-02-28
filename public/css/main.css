@@ -15,8 +15,8 @@ a:hover{
 }
 
 .header-nav{
-    padding: 5% 10%;
-    background-color: goldenrod;
+    padding: 3% 10%;
+    background-color: rgb(0, 124, 10);
 }
 
 .header-nav > ul{
