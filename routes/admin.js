@@ -8,7 +8,7 @@ const products = [];
 
 // /admin/add-product => GET
 router.get('/add-product', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '..', 'views', 'add-product.html'));
+    res.render('add-product', {title: 'Add-Product PUG'});
 });
 
 // /admin/add-product => POST
