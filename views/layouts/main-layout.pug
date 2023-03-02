@@ -12,9 +12,9 @@ html(lang="en")
             nav.header-nav
                 ul
                  li 
-                    a(href="/") Shop 
+                    a(href="/" class=(path === '/' ? 'active' : '')) Shop 
                  li 
-                    a(href="/admin/add-product") Add-Product
+                    a(href="/admin/add-product" class=(path === '/admin/add-product' ? 'active' : '')) Add-Product
 
         main
             block content

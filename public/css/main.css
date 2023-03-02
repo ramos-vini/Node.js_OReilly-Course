@@ -10,7 +10,7 @@ a{
     color: black;
 }
 
-a:hover{
+a:hover, .active{
     text-decoration: underline;
 }
 
