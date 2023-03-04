@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.engine('hbs', expressHbs.engine({layoutsDir: 'views', extname: '.hbs', defaultLayout: ''}));
+app.engine('hbs', expressHbs.engine({extname: 'hbs', defaultLayout: 'main-layout'}));
 app.set('view engine', 'hbs');
 
 app.use(bodyParser.urlencoded({extended: false}));
