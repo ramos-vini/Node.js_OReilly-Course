@@ -8,7 +8,8 @@ router.get('/', (req, res, next) => {
     const prods = adminData.products;
     res.render('shop', {
         prods: prods,
-        title: 'Shop'
+        title: 'Shop',
+        path: '/'
     });
 });
 
