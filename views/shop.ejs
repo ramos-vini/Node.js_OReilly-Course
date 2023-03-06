@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/css/main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/main.css">
 </head>
+
 <body>
-        <header>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="/">Shop</a></li>
+  <header>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="/" class="active">Shop</a></li>
 
-                <li><a href="/admin/add-product">Add Product</a></li>
-            </ul>
-        </nav>
-        </header>
+        <li><a href="/admin/add-product">Add Product</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <main>
-            <% if(prods.length > 0) { %>
-            <h1>My Products:</h1>
-        
-            <ul>
-                <% prods.forEach(product => { %>
-                    <li><%= product.title %></li>
-                <% }) %>
-            </ul>
-        
-            <% } else { %>
-                <h1>No Products Available.</h1>
-            <% } %>
-        </main>
+  <main>
+    <% if(prods.length > 0) { %>
+    <h1>My Products:</h1>
+
+    <ul>
+      <% prods.forEach(product => { %>
+      <li><%= product.title %></li>
+      <% }) %>
+    </ul>
+
+    <% } else { %>
+    <h1>No Products Available.</h1>
+    <% } %>
+  </main>
 </body>
+
 </html>
